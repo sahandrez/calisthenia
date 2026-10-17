@@ -1,0 +1,106 @@
+:root {
+  --accent: #6cc070;
+  --accent-hover: #3f9d4a;
+  --on-accent: #25361f;
+  --bg: #f2f2f7;
+  --surface: #ffffff;
+  --border: #d1d1d6;
+  --text: #1c1c1e;
+  --dim: #7c7c82;
+  --link: #2f7d3a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #9be15d;
+    --accent-hover: #b4ec7e;
+    --on-accent: #1a2a17;
+    --bg: #000000;
+    --surface: #1c1c1e;
+    --border: #3a3a3c;
+    --text: #f2f2f7;
+    --dim: #98989f;
+    --link: #9be15d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 1rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+a { color: var(--link); }
+
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header.site, footer.site {
+  padding: 1rem 0;
+}
+
+header.site .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+main { padding: 2rem 0 3rem; }
+
+.hero h1 {
+  font-size: clamp(2rem, 8vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.hero .accent { color: var(--accent); }
+
+.lead { font-size: 1.15rem; }
+
+.badge {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.6rem;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.card p { margin: 0; }
+
+footer.site {
+  border-top: 1px solid var(--border);
+  color: var(--dim);
+  font-size: 0.875rem;
+}
+
+footer.site p { margin: 0.25rem 0; }
+
+/* Privacy page */
+.policy h1 { font-size: 2rem; line-height: 1.2; margin-top: 0; }
+.policy h2 { font-size: 1.25rem; margin-top: 2rem; }
+.policy .meta { color: var(--dim); font-size: 0.9rem; }
+.policy code { background: var(--surface); border: 1px solid var(--border); border-radius: 0.25rem; padding: 0 0.25rem; }
